@@ -2,9 +2,10 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>iuhoay.ningbo</groupId>
-	<artifactId>ningbo-api</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
-	<name>ningbo api</name>
+	<artifactId>ningbo4j</artifactId>
+	<version>0.0.1</version>
+	<name>ningbo4j</name>
+	<description>市民卡余额查询接口</description>
 
 	<dependencies>
 		<dependency>
@@ -19,5 +20,14 @@
 			<scope>test</scope>
 		</dependency>
 	</dependencies>
-	<description>市民卡余额查询接口</description>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-jar-plugin</artifactId>
+				<version>2.3.2</version>
+			</plugin>
+		</plugins>
+	</build>
 </project>
