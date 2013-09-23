@@ -1,7 +1,5 @@
 package iuhoay.ningbo;
 
-import java.io.IOException;
-
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 
@@ -13,6 +11,9 @@ public class ICServer {
 	
 	private final static String FORM_URL = "http://0574ic.com/card_xf.asp";
 	private final static String FORM_PARAMS_KBH = "kbh";
+	
+	public final static String MESSAGE_NO_RESULT = "no result"; 
+	public final static String MESSAGE_ERROR = "error";
 	
 	/**
 	 * IC 卡当前余额查询
@@ -28,8 +29,10 @@ public class ICServer {
 							.select("td").get(2)
 							.select("p").get(0)
 							.text();
-			} catch (IOException e) {
-				e.printStackTrace();
+			} catch (IndexOutOfBoundsException e) {
+				result = MESSAGE_NO_RESULT;
+			} catch (Exception e) {
+				result = MESSAGE_ERROR;
 			}
 		}
 		return result;
