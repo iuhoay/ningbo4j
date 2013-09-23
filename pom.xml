@@ -3,7 +3,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>iuhoay.ningbo</groupId>
 	<artifactId>ningbo4j</artifactId>
-	<version>0.0.1</version>
+	<version>0.0.2</version>
 	<name>ningbo4j</name>
 	<description>市民卡余额查询接口</description>
 
